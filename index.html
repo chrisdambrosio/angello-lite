@@ -5,6 +5,31 @@
 </head>
 <body>
   <div ng-controller="MainCtrl">
+    <div class="span6 body-content">
+      <h2>Story</h2>
+      <form class="form-horizontal">
+        <div class="control-group">
+          <label class="control-label" for="inputTitle">Title</label>
+          <div class="controls">
+            <input type="text"
+                   placeholder="Title"
+                   ng-model="currentStory.title">
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label"
+                 for="inputDescription">Description</label>
+          <div class="controls">
+            <textarea id="inputDescription"
+                      placeholder="Description"
+                      rows=3
+                      ng-model="currentStory.description">
+            </textarea>
+          </div>
+        </div>
+      </form>
+    </div>
+
     <div class="span4 sidebar-content">
       <h2>Stories</h2>
       <div class="story"
