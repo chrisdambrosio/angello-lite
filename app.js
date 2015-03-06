@@ -1,6 +1,13 @@
 var myModule = angular.module('Angello', []);
 
 myModule.controller('MainCtrl', function($scope) {
+  $scope.createStory = function() {
+    $scope.stories.push({
+      title: 'New Story',
+      description: 'Description pending'
+    });
+  };
+
   $scope.currentStory;
 
   $scope.setCurrentStory = function(story) {
