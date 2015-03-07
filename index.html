@@ -12,8 +12,29 @@
           <label class="control-label" for="inputTitle">Title</label>
           <div class="controls">
             <input type="text"
+                   id="inputTitle"
                    placeholder="Title"
                    ng-model="currentStory.title">
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="inputStatus">Status</label>
+          <div class="controls">
+            <select id="inputStatus"
+                    ng-change="setCurrentStatus(currentStatus)"
+                    ng-options="s.name for s in statuses"
+                    ng-model="currentStatus">
+            </select>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="inputType">Type</label>
+          <div class="controls">
+            <select id="inputType"
+                    ng-change="setCurrentType(currentType)"
+                    ng-options="t.name for t in types"
+                    ng-model="currentType">
+            </select>
           </div>
         </div>
         <div class="control-group">
@@ -25,6 +46,28 @@
                       rows=3
                       ng-model="currentStory.description">
             </textarea>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label"
+                 for="inputReporter">Reporter</label>
+          <div class="controls">
+            <input type="text"
+                   id="inputReporter"
+                   placeholder="Reporter"
+                   ng-model="currentStory.reporter">
+            </input>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label"
+                 for="inputAssignee">Assignee</label>
+          <div class="controls">
+            <input type="text"
+                   id="inputAssignee"
+                   placeholder="Assignee"
+                   ng-model="currentStory.assignee">
+            </input>
           </div>
         </div>
       </form>
